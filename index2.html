@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style to hide the iframe initially */
+        iframe {
+            display: none;
+            width: 100%;
+            height: 115vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">Loading...</div>
+
+    <script>
+        // JavaScript to show the iframe after a 3-second delay
+        setTimeout(function () {
+            document.getElementById("loading").style.display = "none";
+            document.querySelector("iframe").style.display = "block";
+        }, 7000); // 3000 milliseconds = 3 seconds
+    </script>
+
+    <!-- <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FZfJhtN5IcdvLbNdeENZSev%2FYunion-presentation%3Fpage-id%3D442%253A2144%26type%3Ddesign%26node-id%3D595-3303%26viewport%3D-2224%252C239%252C0.57%26t%3DecsWHJgkocYqEi9n-1%26scaling%3Dmin-zoom%26mode%3Ddesign" allow="fullscreen"></iframe> -->
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FZfJhtN5IcdvLbNdeENZSev%2FYunion-presentation%3Fpage-id%3D442%253A2144%26type%3Ddesign%26node-id%3D595-3303%26viewport%3D-42%252C465%252C0.04%26t%3D28o1oxC9WPGN6jNl-1%26scaling%3Dscale-down%26hotspot-hints%3D0%26mode%3Ddesign" allowfullscreen></iframe>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style for the loading component container */
+        iframe {
+            width: 100%;
+            height: 105vh;
+            border: none;
+        }
+
+        #loading {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Style for the loading animation */
+        .loading-animation {
+            /* Use a CSS animation or loading library for your animation */
+            /* Example using CSS keyframes animation */
+            width: 100px;
+            height: 100px;
+            background-color: #FFFF; /* Google blue color */
+            border-radius: 50%;
+            animation: spin 2s linear infinite; /* Rotation animation */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Style for the Google logo (Replace with your logo image) */
+        .google-logo {
+            width: 150px;
+            height: 50px;
+            background-image: url('logo.svg'); /* Replace with your logo image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* Style for the progress bar container */
+        .progress-container {
+            margin-top: 20px;
+            width: 150px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        /* Style for the progress bar animation */
+        .progress-bar {
+            width: 0;
+            height: 100%;
+            background-color: #155869; /* Google blue color */
+            animation: progress 5s linear infinite; /* Progress animation */
+        }
+
+        @keyframes progress {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <div class="loading-animation"></div>
+        <div class="google-logo"></div>
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to hide the loading component and display the iframe after a 7-second delay
+        setTimeout(function () {
+            document.getElementById("loading").style.display = "none";
+            document.querySelector("iframe").style.display = "block";
+        }, 7000); // 7000 milliseconds = 7 seconds
+    </script>
+
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FZfJhtN5IcdvLbNdeENZSev%2FYunion-presentation%3Fpage-id%3D442%253A2144%26type%3Ddesign%26node-id%3D595-3303%26viewport%3D-42%252C465%252C0.04%26t%3D28o1oxC9WPGN6jNl-1%26scaling%3Dscale-down%26mode%3Ddesign" allowfullscreen></iframe>
+</body>
+</html>
